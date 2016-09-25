@@ -14,8 +14,7 @@ import { HeroService }         from './hero.service';
     FormsModule,
     routing
     ],
-  declarations: [ 
-
+  declarations: [
     AppComponent,
     HeroDetailComponent,
     HeroesComponent
