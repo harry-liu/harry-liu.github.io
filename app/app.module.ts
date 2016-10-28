@@ -4,9 +4,8 @@ import { FormsModule }   from '@angular/forms';
 
 import { routing } from './app.routing';
 import { AppComponent }   from './app.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent }     from './heroes.component';
-import { HeroService }         from './hero.service';
+import { BlogsComponent }     from './blogs.component';
+import {CvComponent} from "./cv.component";
 
 @NgModule({
   imports:      [ 
@@ -15,14 +14,10 @@ import { HeroService }         from './hero.service';
     routing
     ],
   declarations: [
-    AppComponent,
-    HeroDetailComponent,
-    HeroesComponent
+      AppComponent,
+      BlogsComponent,
+      CvComponent
    	],
-
-  providers: [
-    HeroService
-  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

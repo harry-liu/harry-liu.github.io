@@ -1,10 +1,15 @@
 "use strict";
 var router_1 = require('@angular/router');
-var heroes_component_1 = require('./heroes.component');
+var blogs_component_1 = require('./blogs.component');
+var cv_component_1 = require("./cv.component");
 var appRoutes = [
     {
-        path: 'heroes',
-        component: heroes_component_1.HeroesComponent
+        path: 'blogs',
+        component: blogs_component_1.BlogsComponent
+    },
+    {
+        path: 'cv',
+        component: cv_component_1.CvComponent
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

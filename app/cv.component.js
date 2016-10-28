@@ -8,19 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
-var HeroService = (function () {
-    function HeroService() {
+/**
+ * Created by harryliu on 28/10/16.
+ */
+var core_1 = require("@angular/core");
+var CvComponent = (function () {
+    function CvComponent() {
     }
-    HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(mock_heroes_1.HEROES);
-    };
-    HeroService = __decorate([
-        core_1.Injectable(), 
+    CvComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            templateUrl: 'views/cv.view.html',
+            styleUrls: ['views/cv.view.css'],
+        }), 
         __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    ], CvComponent);
+    return CvComponent;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.CvComponent = CvComponent;
+//# sourceMappingURL=cv.component.js.map
