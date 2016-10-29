@@ -11,15 +11,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by harryliu on 28/10/16.
  */
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
+var animations_1 = require("./animations");
 var CvComponent = (function () {
     function CvComponent() {
     }
+    Object.defineProperty(CvComponent.prototype, "routeAnimation", {
+        get: function () {
+            return true;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    __decorate([
+        core_1.HostBinding('@routeAnimation'), 
+        __metadata('design:type', Object)
+    ], CvComponent.prototype, "routeAnimation", null);
     CvComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'views/cv.view.html',
             styleUrls: ['views/cv.view.css'],
+            //host: { '[@routeAnimation]': 'true' },
+            animations: animations_1.Animations.page,
         }), 
         __metadata('design:paramtypes', [])
     ], CvComponent);

@@ -10,6 +10,11 @@ var appRoutes = [
     {
         path: 'cv',
         component: cv_component_1.CvComponent
+    },
+    {
+        path: '',
+        redirectTo: '/blogs',
+        pathMatch: 'full'
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

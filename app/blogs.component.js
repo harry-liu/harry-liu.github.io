@@ -9,14 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var animations_1 = require("./animations");
 var BlogsComponent = (function () {
     function BlogsComponent() {
     }
+    Object.defineProperty(BlogsComponent.prototype, "routeAnimation", {
+        get: function () {
+            return true;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    __decorate([
+        core_1.HostBinding('@routeAnimation'), 
+        __metadata('design:type', Object)
+    ], BlogsComponent.prototype, "routeAnimation", null);
     BlogsComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'views/blogs.view.html',
-            styleUrls: ['views/blogs.view.css']
+            styleUrls: ['views/blogs.view.css'],
+            //host: { '[@routeAnimation]': 'true' },
+            animations: animations_1.Animations.page
         }), 
         __metadata('design:paramtypes', [])
     ], BlogsComponent);
