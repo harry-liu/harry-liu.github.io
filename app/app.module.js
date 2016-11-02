@@ -15,6 +15,8 @@ var app_routing_1 = require('./app.routing');
 var app_component_1 = require('./app.component');
 var blogs_component_1 = require('./blogs.component');
 var cv_component_1 = require("./cv.component");
+var arrow_up_component_1 = require("./arrow-up.component");
+var arrow_down_component_1 = require("./arrow-down.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +30,9 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 blogs_component_1.BlogsComponent,
-                cv_component_1.CvComponent
+                cv_component_1.CvComponent,
+                arrow_up_component_1.ArrowUpComponent,
+                arrow_down_component_1.ArrowDownComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

@@ -8,20 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Harry\'s Blog';
+/**
+ * Created by harryliu on 31/10/16.
+ */
+var core_1 = require("@angular/core");
+var ArrowDownComponent = (function () {
+    function ArrowDownComponent() {
+        this.value = 1;
     }
-    AppComponent = __decorate([
+    ArrowDownComponent.prototype.down = function () {
+        this.value++;
+    };
+    ArrowDownComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n<div class=\"container\">\n    <div class=\"nav\">\n        <h1>{{title}}</h1>\n        <a routerLink=\"/blogs\">Blogs</a>\n        <a routerLink=\"/cv\">CV</a>\n        <br>\n    </div>\n    <router-outlet></router-outlet>\n</div>\n  ",
-            styles: ["\n.nav{\n    position: fixed;\n    left:0;\n    top:40%;\n    z-index: 100;\n}\n"],
+            selector: 'arrow-down',
+            template: "\n        <div class=\"down\" (click)=\"down()\">\n            down\n        </div>\n    ",
+            styles: ["\n        .down{\n            width: 100px;\n            height: 100px;\n            background-color: black;\n            color:white;\n        }\n    "],
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ArrowDownComponent);
+    return ArrowDownComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ArrowDownComponent = ArrowDownComponent;
+//# sourceMappingURL=arrow-down.component.js.map
