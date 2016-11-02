@@ -12,9 +12,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by harryliu on 28/10/16.
  */
 var core_1 = require('@angular/core');
-var animations_1 = require("./animations");
 var CvComponent = (function () {
     function CvComponent() {
+        this.currentSection = 1;
     }
     Object.defineProperty(CvComponent.prototype, "routeAnimation", {
         get: function () {
@@ -23,6 +23,9 @@ var CvComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    CvComponent.prototype.changeTab = function (id) {
+        this.currentSection = id;
+    };
     __decorate([
         core_1.HostBinding('@routeAnimation'), 
         __metadata('design:type', Object)
@@ -33,7 +36,35 @@ var CvComponent = (function () {
             templateUrl: 'views/cv.view.html',
             styleUrls: ['views/cv.view.css'],
             //host: { '[@routeAnimation]': 'true' },
-            animations: animations_1.Animations.page,
+            animations: [
+                core_1.trigger('routeAnimation', [
+                    core_1.state('*', core_1.style({
+                        opacity: 1
+                    })),
+                    core_1.transition('void => *', [
+                        core_1.style({
+                            transform: 'translateX(-100%)',
+                            opacity: 0
+                        }),
+                        core_1.animate(500)
+                    ]),
+                    core_1.transition('* => void', [
+                        core_1.animate(500, core_1.style({
+                            transform: 'translateX(100%)',
+                            opacity: 0
+                        }))
+                    ])
+                ]),
+                core_1.trigger('tabAnimation', [
+                    core_1.transition('void => *', [
+                        core_1.style({ opacity: 0 }),
+                        core_1.animate(500, core_1.style({ opacity: 1 }))
+                    ]),
+                    core_1.transition('* => void', [
+                        core_1.animate(500, core_1.style({ opacity: 0 }))
+                    ])
+                ])
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], CvComponent);

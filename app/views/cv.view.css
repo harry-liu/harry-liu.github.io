@@ -6,13 +6,38 @@
     top:0;
 }
 
+.container{
+    transform: translateX(0);
+    height: 100vh;
+}
+
 .nav{
-    position: fixed;
-    left:0;
-    top:40px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100px;
+    -webkit-transform: translate(-100px,-50%);
+    -moz-transform: translate(-100px,-50%);
+    -ms-transform: translate(-100px,-50%);
+    -o-transform: translate(-100px,-50%);
+    transform: translate(-100px,-50%);
+}
+
+.nav ul{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav ul li{
+    width: 100px;
+    height:20px;
 }
 
 .section{
     width: 100%;
     height:100vh;
+    position: absolute;
+    top: 0;
 }

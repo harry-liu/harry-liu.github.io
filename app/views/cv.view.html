@@ -1,12 +1,14 @@
 <div class="container">
     <div class="nav">
-        <span>section 1</span>
-        <span>section 2</span>
+        <ul>
+            <li style="background-color: greenyellow" (click)="changeTab(1)">section 1</li>
+            <li style="background-color: #336699" (click)="changeTab(2)">section 2</li>
+        </ul>
     </div>
-    <div class="row section" style="background-color: greenyellow">
+    <div class="row section" style="background-color: greenyellow" *ngIf="currentSection == 1" [@tabAnimation]="true">
         this is section 1
     </div>
-    <div class="row section" style="background-color: #336699">
+    <div class="row section" style="background-color: #336699" *ngIf="currentSection == 2" [@tabAnimation]="true">
         this is section 2
     </div>
 </div>
