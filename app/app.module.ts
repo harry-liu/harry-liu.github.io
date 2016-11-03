@@ -6,8 +6,6 @@ import { routing } from './app.routing';
 import { AppComponent }   from './app.component';
 import { BlogsComponent }     from './blogs.component';
 import {CvComponent} from "./cv.component";
-import {ArrowUpComponent} from "./arrow-up.component";
-import {ArrowDownComponent} from "./arrow-down.component";
 
 @NgModule({
   imports:      [ 
@@ -18,9 +16,7 @@ import {ArrowDownComponent} from "./arrow-down.component";
   declarations: [
       AppComponent,
       BlogsComponent,
-      CvComponent,
-      ArrowUpComponent,
-      ArrowDownComponent
+      CvComponent
    	],
   bootstrap:    [ AppComponent ]
 })
