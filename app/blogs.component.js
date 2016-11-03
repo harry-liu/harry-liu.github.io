@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var animations_1 = require("./animations");
 var BlogsComponent = (function () {
     function BlogsComponent() {
     }
@@ -29,8 +28,24 @@ var BlogsComponent = (function () {
             moduleId: module.id,
             templateUrl: 'views/blogs.view.html',
             styleUrls: ['views/blogs.view.css'],
-            //host: { '[@routeAnimation]': 'true' },
-            animations: [animations_1.Animations.page],
+            animations: [core_1.trigger('routeAnimation', [
+                    core_1.state('*', core_1.style({
+                        opacity: 1
+                    })),
+                    core_1.transition('void => *', [
+                        core_1.style({
+                            transform: 'translateX(-100%)',
+                            opacity: 0
+                        }),
+                        core_1.animate(500)
+                    ]),
+                    core_1.transition('* => void', [
+                        core_1.animate(500, core_1.style({
+                            transform: 'translateX(100%)',
+                            opacity: 0
+                        }))
+                    ])
+                ])],
         }), 
         __metadata('design:paramtypes', [])
     ], BlogsComponent);

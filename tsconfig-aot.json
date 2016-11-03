@@ -15,7 +15,6 @@
   "files": [
     "app/app.module.ts",
     "app/app.component.ts",
-    "app/animations.ts",
     "app/app.routing.ts",
     "app/cv.component.ts",
     "app/main.ts",

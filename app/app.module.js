@@ -23,12 +23,12 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                app_routing_1.routing
+                app_routing_1.routing,
             ],
             declarations: [
                 app_component_1.AppComponent,
                 blogs_component_1.BlogsComponent,
-                cv_component_1.CvComponent
+                cv_component_1.CvComponent,
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

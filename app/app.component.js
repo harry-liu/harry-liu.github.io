@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var animations_1 = require("./animations");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Harry\'s Blog';
@@ -31,7 +30,18 @@ var AppComponent = (function () {
             selector: 'my-app',
             template: "\n<div class=\"container\">\n    <div class=\"nav\" [@menuAnimation]=\"menuState\">\n        <h1>{{title}}</h1>\n        <a routerLink=\"/blogs\">Blogs</a>\n        <a routerLink=\"/cv\">CV</a>\n        <br>\n    </div>\n    <button (click)=\"toggleMenu()\" class=\"btn showMenuBtn\">{{menuWord}}</button>\n    <router-outlet></router-outlet>\n</div>\n  ",
             styles: ["\n.nav{\n    position: fixed;\n    left:0;\n    top:40%;\n    z-index: 100;\n}\n\n.showMenuBtn{\n    position: fixed;\n    left:15px;\n    top:15px;\n    z-index: 100;\n}\n"],
-            animations: [animations_1.Animations.menu]
+            animations: [core_1.trigger('menuAnimation', [
+                    core_1.state('hide', core_1.style({
+                        opacity: 0,
+                        transform: 'translateX(-100%)'
+                    })),
+                    core_1.state('show', core_1.style({
+                        opacity: 1,
+                        transform: 'translateX(0)'
+                    })),
+                    core_1.transition('hide => show', core_1.animate('500ms ease-in')),
+                    core_1.transition('show => hide', core_1.animate('500ms ease-in')),
+                ])]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

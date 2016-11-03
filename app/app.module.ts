@@ -8,15 +8,15 @@ import { BlogsComponent }     from './blogs.component';
 import {CvComponent} from "./cv.component";
 
 @NgModule({
-  imports:      [ 
+    imports:      [
   	BrowserModule ,
     FormsModule,
-    routing
+    routing,
     ],
-  declarations: [
+    declarations: [
       AppComponent,
       BlogsComponent,
-      CvComponent
+      CvComponent,
    	],
   bootstrap:    [ AppComponent ]
 })

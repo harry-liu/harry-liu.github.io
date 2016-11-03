@@ -1,12 +1,27 @@
-import {Component, HostBinding} from '@angular/core';
-import {Animations} from "./animations";
+import {Component, HostBinding, trigger, style, state, transition, animate} from '@angular/core';
 
 @Component({
     moduleId:module.id,
     templateUrl: 'views/blogs.view.html',
     styleUrls: ['views/blogs.view.css'],
-    //host: { '[@routeAnimation]': 'true' },
-    animations: [Animations.page],
+    animations: [trigger('routeAnimation', [
+        state('*', style({
+            opacity: 1
+        })),
+        transition('void => *', [
+            style({
+                transform: 'translateX(-100%)',
+                opacity: 0
+            }),
+            animate(500)
+        ]),
+        transition('* => void', [
+            animate(500, style({
+                transform: 'translateX(100%)',
+                opacity: 0
+            }))
+        ])
+    ])],
 })
 
 export class BlogsComponent {

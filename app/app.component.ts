@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {Animations} from "./animations";
+import {Component, trigger, style, state, transition, animate} from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
@@ -29,7 +28,22 @@ import {Animations} from "./animations";
     z-index: 100;
 }
 `],
-    animations:[Animations.menu]
+    animations:[trigger('menuAnimation',[
+        state('hide',style({
+            opacity:0,
+            transform: 'translateX(-100%)'
+        })),
+        state('show',style({
+            opacity:1,
+            transform: 'translateX(0)'
+        })),
+        transition('hide => show',
+            animate('500ms ease-in')
+        ),
+        transition('show => hide',
+            animate('500ms ease-in')
+        ),
+    ])]
 })
 export class AppComponent {
     title = 'Harry\'s Blog';
