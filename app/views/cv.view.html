@@ -1,14 +1,69 @@
 <div class="container">
     <div class="nav">
         <ul>
-            <li style="background-color: greenyellow" (click)="changeTab(1)">section 1</li>
-            <li style="background-color: #336699" (click)="changeTab(2)">section 2</li>
+            <li style="background-color: #1ABC9C" (click)="changeTab(1)">基本信息</li>
+            <li style="background-color: #4AA3DF" (click)="changeTab(2)">项目经验</li>
+            <li style="background-color: #9B59B6" (click)="changeTab(3)">擅长技术</li>
+            <li style="background-color: #E74C3C" (click)="changeTab(4)">教育经历</li>
+            <li style="background-color: #95A5A6" (click)="changeTab(5)">工作经历</li>
         </ul>
     </div>
-    <div class="row section" style="background-color: greenyellow" *ngIf="currentSection == 1" [@tabAnimation]="true">
-        this is section 1
+    <div class="row section" style="background-color: #1ABC9C" *ngIf="currentSection == 1" [@tabAnimation]="true">
+        <div class="content">
+            <img src="" alt="">
+            <h2>刘珂</h2>
+            <h2>大风起兮云飞扬，扶摇直上九万里</h2>
+            <h2><a href="mailto:747311978@qq.com">747311978@qq.com</a></h2>
+            <h2><a href="https://github.com/harry-liu">Github</a></h2>
+            <h2>前端开发工程师</h2>
+            <h2><a href="http://zing-studio.com.au/#/home">Zing Studio</a></h2>
+        </div>
     </div>
-    <div class="row section" style="background-color: #336699" *ngIf="currentSection == 2" [@tabAnimation]="true">
-        this is section 2
+    <div class="row section" style="background-color: #4AA3DF" *ngIf="currentSection == 2" [@tabAnimation]="true">
+        <div class="content">
+            <h2>Zing Studio</h2>
+            <p>Zing Studio官方网站，Angular1</p>
+            <br>
+            <h2>Jmerit</h2>
+            <p>Jmerit官方网站，WordPress</p>
+            <br>
+            <h2>互动圈</h2>
+            <p>webapp，cordova+angular1</p>
+            <br>
+            <br>
+            <p><a href="https://github.com/harry-liu">Github还有更多</a></p>
+        </div>
+    </div>
+    <div class="row section" style="background-color: #9B59B6" *ngIf="currentSection == 3" [@tabAnimation]="true">
+        <div class="content">
+            <span>CSS</span>
+            <span>HTML5</span>
+            <span>Bootstrap</span>
+            <br>
+            <br>
+            <span>JavaScript</span>
+            <span>Angular 1</span>
+            <span>Angular 2</span>
+            <br>
+            <br>
+            <span>jQuery</span>
+        </div>
+    </div>
+    <div class="row section" style="background-color: #E74C3C" *ngIf="currentSection == 4" [@tabAnimation]="true">
+        <div class="content">
+            <h2>AIT</h2>
+            <p>Bachelor Degree</p>
+            <p>Information Technology, Software Development</p>
+        </div>
+    </div>
+    <div class="row section" style="background-color: #95A5A6" *ngIf="currentSection == 5" [@tabAnimation]="true">
+        <div class="content">
+            <h2>澳洲门道</h2>
+            <p>实习生，前端程序员</p>
+            <h2>Zing Studio</h2>
+            <p>创始人之一，rogrammer</p>
+            <h2>互动未来</h2>
+            <p>前端程序员</p>
+        </div>
     </div>
 </div>

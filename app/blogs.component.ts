@@ -6,7 +6,7 @@ import {Animations} from "./animations";
     templateUrl: 'views/blogs.view.html',
     styleUrls: ['views/blogs.view.css'],
     //host: { '[@routeAnimation]': 'true' },
-    animations: Animations.page
+    animations: [Animations.page],
 })
 
 export class BlogsComponent {

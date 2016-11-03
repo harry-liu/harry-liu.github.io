@@ -29,7 +29,7 @@ import {Animations} from "./animations";
     z-index: 100;
 }
 `],
-    animations:Animations.menu
+    animations:[Animations.menu]
 })
 export class AppComponent {
     title = 'Harry\'s Blog';

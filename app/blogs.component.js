@@ -30,7 +30,7 @@ var BlogsComponent = (function () {
             templateUrl: 'views/blogs.view.html',
             styleUrls: ['views/blogs.view.css'],
             //host: { '[@routeAnimation]': 'true' },
-            animations: animations_1.Animations.page
+            animations: [animations_1.Animations.page],
         }), 
         __metadata('design:paramtypes', [])
     ], BlogsComponent);

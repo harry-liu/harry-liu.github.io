@@ -31,7 +31,7 @@ var AppComponent = (function () {
             selector: 'my-app',
             template: "\n<div class=\"container\">\n    <div class=\"nav\" [@menuAnimation]=\"menuState\">\n        <h1>{{title}}</h1>\n        <a routerLink=\"/blogs\">Blogs</a>\n        <a routerLink=\"/cv\">CV</a>\n        <br>\n    </div>\n    <button (click)=\"toggleMenu()\" class=\"btn showMenuBtn\">{{menuWord}}</button>\n    <router-outlet></router-outlet>\n</div>\n  ",
             styles: ["\n.nav{\n    position: fixed;\n    left:0;\n    top:40%;\n    z-index: 100;\n}\n\n.showMenuBtn{\n    position: fixed;\n    left:15px;\n    top:15px;\n    z-index: 100;\n}\n"],
-            animations: animations_1.Animations.menu
+            animations: [animations_1.Animations.menu]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
