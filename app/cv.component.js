@@ -32,7 +32,6 @@ var CvComponent = (function () {
     ], CvComponent.prototype, "routeAnimation", null);
     CvComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
             templateUrl: 'views/cv.view.html',
             styleUrls: ['views/cv.view.css'],
             animations: [core_1.trigger('routeAnimation', [

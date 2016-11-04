@@ -17,6 +17,7 @@
     "app/app.component.ts",
     "app/app.routing.ts",
     "app/cv.component.ts",
+    "app/blogs.component.ts",
     "app/main.ts",
     "./typings/index.d.ts"
   ],

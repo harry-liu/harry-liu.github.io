@@ -25,7 +25,6 @@ var BlogsComponent = (function () {
     ], BlogsComponent.prototype, "routeAnimation", null);
     BlogsComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
             templateUrl: 'views/blogs.view.html',
             styleUrls: ['views/blogs.view.css'],
             animations: [core_1.trigger('routeAnimation', [

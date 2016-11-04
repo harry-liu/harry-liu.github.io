@@ -1,7 +1,6 @@
 import {Component, HostBinding, trigger, style, state, transition, animate} from '@angular/core';
 
 @Component({
-    moduleId:module.id,
     templateUrl: 'views/blogs.view.html',
     styleUrls: ['views/blogs.view.css'],
     animations: [trigger('routeAnimation', [

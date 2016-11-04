@@ -4,7 +4,6 @@
 import {Component, HostBinding, trigger, style, state, transition, animate} from '@angular/core';
 import {Animations} from "./animations";
 @Component({
-    moduleId:module.id,
     templateUrl:'views/cv.view.html',
     styleUrls:['views/cv.view.css'],
     animations: [trigger('routeAnimation', [
