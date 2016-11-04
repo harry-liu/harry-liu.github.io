@@ -1,5 +1,1 @@
 .idea/
-node_modules/*
-!node_modules/bootstrap/
-!node_modules/core-js/
-!node_modules/zone.js/
