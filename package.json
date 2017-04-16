@@ -1,0 +1,23 @@
+{
+  "name": "harry-liu.github.io",
+  "version": "1.0.0",
+  "description": "harry liu's cv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harry-liu/harry-liu.github.io.git"
+  },
+  "author": "harry liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harry-liu/harry-liu.github.io/issues"
+  },
+  "homepage": "https://github.com/harry-liu/harry-liu.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>harry's CV</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    hello github
+    <div class="container" id="cv" @click = "changeShowSection">
+
+        <div class="section" id="section1" v-show="showSection == 1">
+            <canvas-dot-line></canvas-dot-line>
+            <div class="content">
+                <h1>Harry Liu</h1>
+                <h1>Front-end Developer</h1>
+            </div>
+        </div>
+        <div class="section" id="section2" v-show="showSection == 2">
+            <h1 class="content">垂死病中惊坐起，还有代码没写完</h1>
+        </div>
+        <div class="section" id="section3" v-show="showSection == 3">
+            <h1 class="content">Angular1&2，VUE，JavaScript，cordova，npm，webpack，git</h1>
+        </div>
+        <div class="section" id="section4" v-show="showSection == 4">
+            <div class="content">
+                <h1>GitHub: https://github.com/harry-liu</h1>
+                <h1>zing-studio: zing-studio.com.au</h1>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
