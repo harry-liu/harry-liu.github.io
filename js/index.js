@@ -19,7 +19,7 @@ Vue.component('canvas-dot-line',{
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.r, 0, 360);
                 ctx.closePath();
-                ctx.fillStyle = 'rgba(204, 204, 204, 0.2)';
+                ctx.fillStyle = 'rgba(111, 111, 111, 0.2)';
                 ctx.fill();
             }
 
@@ -77,19 +77,30 @@ Vue.component('canvas-dot-line',{
     }
 });
 
-
-var cv = new Vue({
+let cv = new Vue({
     el:'#cv',
     data:{
         showSection:1
+    },
+    created(){
+        let current = window.location.hash;
+        let section = current.substr(current.length-1);
+        if(section>0&&section<5){
+            this.showSection = section;
+        }
+        else {
+            window.location.hash = 'section1';
+        }
     },
     methods:{
         changeShowSection:function () {
             if(this.showSection == 4){
                 this.showSection = 1;
+                window.location.hash = 'section'+this.showSection;
             }
             else {
                 this.showSection++
+                window.location.hash = 'section'+this.showSection;
             }
         }
     }
