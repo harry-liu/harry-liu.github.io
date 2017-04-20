@@ -1,6 +1,9 @@
 /**
  * Created by harryliu on 16/4/17.
  */
+
+
+
 let cv = new Vue({
     el:'#cv',
     data:{
