@@ -1,10 +1,17 @@
 /*common css*/
 body{
     margin:0;
+    padding:0;
 }
 
 h1{
     margin:0;
+}
+
+#cv{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container{
@@ -24,8 +31,10 @@ h1{
     width: 100%;
 }
 
-.section .canvas{
+.section .dot-line-canvas{
     position: absolute;
     width: 100vw;
     height: 100vh;
+    top:0;
+    left:0;
 }

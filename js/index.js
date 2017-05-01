@@ -7,7 +7,7 @@ import router from './router.js'
 
 let cv = new Vue({
     el:'#cv',
-    router:router
+    router:router,
     //render:h=>h()
     // data:{
     //     showSection:1
@@ -22,16 +22,12 @@ let cv = new Vue({
     //         window.location.hash = 'section1';
     //     }
     // },
-    // methods:{
-    //     changeShowSection:function () {
-    //         if(this.showSection == 4){
-    //             this.showSection = 1;
-    //             window.location.hash = 'section'+this.showSection;
-    //         }
-    //         else {
-    //             this.showSection++
-    //             window.location.hash = 'section'+this.showSection;
-    //         }
-    //     }
-    // }
-})
+    methods:{
+        changeShowSection:function () {
+            let currentSection = this.$route.name.substr(this.$route.name.length-1);
+            let nextSection = Number(currentSection)+1;
+            console.log(nextSection);
+            this.$router.push('/section'+nextSection)
+        }
+    }
+});

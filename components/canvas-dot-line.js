@@ -1,8 +1,9 @@
 /**
  * Created by harryliu on 18/4/17.
  */
-Vue.component('canvas-dot-line',{
-    template:`<canvas class="canvas"></canvas>`,
+import Vue from 'vue';
+export default Vue.component('canvas-dot-line',{
+    template:`<canvas class="dot-line-canvas"></canvas>`,
     mounted(){
         //console.log(this.$el)
         class Circle{
@@ -47,8 +48,8 @@ Vue.component('canvas-dot-line',{
 
         window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
         let canvas = this.$el;
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         let ctx = canvas.getContext('2d');
         let w = canvas.width;
         let h = canvas.height;
@@ -58,7 +59,7 @@ Vue.component('canvas-dot-line',{
             for(let i = 0; i < circles.length; i++) {
                 circles[i].move(w, h);
                 circles[i].drawCircle(ctx);
-                for(j = i + 1; j < circles.length; j++) {
+                for(let j = i + 1; j < circles.length; j++) {
                     circles[i].drawLine(ctx, circles[j])
                 }
             }
